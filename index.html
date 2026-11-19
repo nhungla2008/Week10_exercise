@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript exercise</title>
+		<script>
+			function changeHeading() {
+				document.getElementById("main_heading"). innerHTML = "Let's get strated!";
+			}
+			function collectData1() {
+				let txt = document.getElementById("getData1");
+				alert("You search for: " + txt.value);
+			}
+			function collectData2() {
+				let data2 = document.getElementById("getData2");
+				alert("Hi" + data2.value);
+		</script>
+	</head>
+	<body>
+		<h1 onmouseout="changeHeading()" id="main_heading">Welcome to my site!</h1>
+		<br>
+		
+		<form>
+			<h2>Random Form</h2>
+			<label>Search: </label>
+			<input type="text" id="getData1">
+			<br>
+			<label>Name</label>
+			<input type="text" id="getData2">
+		
+		</form>
+		<button type="button" onclick="collectData1()">Submit</button>
+
+	</body>
+</html>
