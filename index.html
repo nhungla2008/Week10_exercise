@@ -15,6 +15,11 @@
 			function collectData2() {
 				let data2 = document.getElementById("getData2");
 				alert("Hi" + data2.value);
+			}
+			function collectData3() {
+				let data3 = document.getElementById("getData3");
+				alert("You are" + data2.value + "years old");
+			}
 		</script>
 	</head>
 	<body>
@@ -28,9 +33,11 @@
 			<br>
 			<label>Name</label>
 			<input type="text" id="getData2">
+			<label>How old are you?</label>
+			<input type="text" id="getData3">
 		
 		</form>
-		<button type="button" onclick="collectData1()">Submit</button>
+		<button type="button" onclick="collectData1()" onclick="collectData2()" onclick="collectData3()">Submit</button>
 
 	</body>
 </html>
