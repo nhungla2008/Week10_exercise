@@ -4,10 +4,18 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>JavaScript exercise</title>
+		<!-- link to css -->
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Jost:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Redaction+10:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+		<!-- JS goes here -->
 		<script>
+			//this function to change the Heading
 			function changeHeading() {
-				document.getElementById("main_heading"). innerHTML = "Let's get strated!";
+				document.getElementById("main_heading"). innerHTML = "Let's get started!";
 			}
+			//these functions used to collect user's data
 			function collectData1() {
 				let txt = document.getElementById("getData1");
 				alert("You search for: " + txt.value);
@@ -22,26 +30,32 @@
 				let msg = document.getElementById("licenseMsg");
 				
 				alert("You are " + data3.value + " years old");
+				//condition used to check if the user is qualified for driving license
 				if (age >= 17){
 					msg.textContent = "You are eligible to apply for a driving license.";
 				} else {
 					msg.textContent = "You are not eligible to apply for a driving license yet.";
 				}
 			}
+			//this function used to call other functions at once
 			function submitForm() {
 				collectData1();
 				collectData2();
 				collectData3();
+			}
+			//function to change the style 
+			function changeStyle() {
+				let doc = document.getElementById("demo");
+				doc.style.color = "#006666";
 			}
 			
 		</script>
 	</head>
 	<body>
 		<h1 onmouseout="changeHeading()" id="main_heading">Welcome to my site!</h1>
-		<br>
-		
+		<!-- form -->
 		<form>
-			<h2>Random Form</h2>
+			<h2 id="demo" onmouseover="changeStyle()">Random Form</h2>
 			<label>Search: </label>
 			<input type="text" id="getData1">
 			<br>
@@ -52,7 +66,9 @@
 			<input type="text" id="getData3">
 		
 		</form>
+		<!-- button used to submit and show input -->
 		<button type="button" onclick="submitForm()">Submit</button>
+		<!--our message-->
 		<p id="licenseMsg"></p>
 
 	</body>
